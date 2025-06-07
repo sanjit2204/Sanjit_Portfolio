@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', {title: 'Resume'}); %>
+  <style>
+    .resume-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--secondary-bg);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .resume-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .resume-section {
+      margin-bottom: 2rem;
+    }
+    
+    .resume-section h2 {
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .download-btn {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="stars-container"></div>
+  
+  <%- include('partials/header'); %>
+  
+  <main class="resume-page">
+    <div class="resume-container">
+      <div class="resume-header">
+        <h1>Sanjit Davuluri</h1>
+        <p>Hyderabad, India | +91 9912396296 | sanjit.davuluri@gmail.com</p>
+      </div>
+      
+      <div class="resume-section">
+        <h2>Education</h2>
+        <h3>Bachelor of Technology in Computing and Data Science</h3>
+        <p>Sai University, Chennai | 2022 - 2026</p>
+        <p>CGPA: 8.43</p>
+      </div>
+      
+      <div class="resume-section">
+        <h2>Experience</h2>
+        <h3>AI Intern | Seneca Global</h3>
+        <p>June 2025 - Present</p>
+        <ul>
+          <li>Developing machine learning models for various business applications</li>
+          <li>Implementing deep learning solutions for computer vision tasks</li>
+          <li>Building and optimizing neural networks for improved performance</li>
+          <li>Collaborating with team members on AI research projects</li>
+        </ul>
+        
+        <h3>Python Developer Intern | Seneca Global</h3>
+        <p>June 2023 - August 2023</p>
+        <ul>
+          <li>Built a RESTful API using Flask to manage orders</li>
+          <li>Gained hands-on experience in designing APIs and working with Flask</li>
+          <li>Resolved technical challenges during project development</li>
+        </ul>
+      </div>
+      
+      <div class="resume-section">
+        <h2>Projects</h2>
+        <h3>Fake Voice Detector</h3>
+        <p>Voice anti-spoofing model using spectrogram-based deep learning with ~90% accuracy</p>
+        
+        <h3>Rock Type Classification</h3>
+        <p>Deep learning model using Transfer Learning with InceptionResNetV2 and DenseNet201</p>
+        
+        <h3>Age Group Prediction</h3>
+        <p>Classification model using NHANES dataset with multiple ML algorithms</p>
+      </div>
+      
+      <a href="/Sanjit_Resume.pdf" download class="cta-button download-btn">Download Full Resume</a>
+    </div>
+  </main>
+  
+  <%- include('partials/footer'); %>
+  
+  <script src="/js/stars.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

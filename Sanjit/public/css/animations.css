@@ -1,0 +1,66 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(156, 39, 176, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(156, 39, 176, 0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.floating-cube {
+  animation: float 6s ease-in-out infinite;
+}
+
+.cta-button {
+  animation: pulse 2s infinite;
+}
+
+/* Star animations */
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+/* 3D effect for logo */
+#3d-logo {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+#3d-logo:hover {
+  animation: rotate 10s infinite linear;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', {title: 'Projects'}); %>
+</head>
+<body>
+  <div id="stars-container"></div>
+  
+  <%- include('partials/header'); %>
+  
+  <main class="projects-page">
+    <section class="projects-section">
+      <h2 class="section-title">My Projects</h2>
+      
+      <div class="projects-grid">
+        <!-- Rock Type Classification -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #4b6cb7, #182848);">
+            <div class="project-overlay">
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Keras</span>
+              <span class="tech-tag">CNN</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Rock Type Classification</h3>
+            <p>Deep learning model for rock classification using Transfer Learning with InceptionResNetV2 and DenseNet201.</p>
+            <div class="project-details" style="display: none;">
+              <h4>Project Details:</h4>
+              <ul>
+                <li>Developed a deep learning model for rock type classification using a dataset of 505 images</li>
+                <li>Implemented Transfer Learning (TL) with pre-trained CNNs (InceptionResNetV2, DenseNet201, ConvNeXtTiny)</li>
+                <li>Applied image preprocessing techniques, including resizing, normalization, and label encoding</li>
+                <li>Trained and optimized the model using TensorFlow and Keras, leveraging dropout and adaptive learning rate tuning</li>
+                <li>Evaluated performance using confusion matrix, precision, recall, and accuracy metrics</li>
+              </ul>
+            </div>
+            <button class="project-link" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Age Group Prediction -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+            <div class="project-overlay">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">GridSearchCV</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Age Group Prediction</h3>
+            <p>Classification model using NHANES dataset with multiple ML algorithms and hyperparameter tuning.</p>
+            <div class="project-details" style="display: none;">
+              <h4>Project Details:</h4>
+              <ul>
+                <li>Developed a classification model to predict age groups using the NHANES dataset</li>
+                <li>Performed data preprocessing, including feature selection, handling missing values, and scaling with StandardScaler</li>
+                <li>Built and evaluated multiple ML models: Logistic Regression, Random Forest, Decision Tree, SVC, Gradient Boosting</li>
+                <li>Optimized model performance using GridSearchCV for hyperparameter tuning</li>
+                <li>Evaluated model accuracy using confusion matrix, precision, recall, and F1-score</li>
+              </ul>
+            </div>
+            <button class="project-link" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Fake Voice Detector -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #c31432, #240b36);">
+            <div class="project-overlay">
+              <span class="tech-tag">Librosa</span>
+              <span class="tech-tag">MobileNetV2</span>
+              <span class="tech-tag">Mel-spectrograms</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Fake Voice Detector</h3>
+            <p>Voice anti-spoofing model using spectrogram-based deep learning with ~90% accuracy.</p>
+            <div class="project-details" style="display: none;">
+              <h4>Project Details:</h4>
+              <ul>
+                <li>Developed and deployed a voice anti-spoofing model to classify .wav audio inputs as bonafide or spoofed</li>
+                <li>Preprocessed raw audio data using Librosa to generate mel-spectrograms, converting .wav files into 224×224 RGB spectrogram images</li>
+                <li>Fine-tuned MobileNetV2 (transfer learning on ImageNet weights) to achieve ~90% accuracy on 2,500+ spectrogram images</li>
+                <li>Built a custom end-to-end pipeline including data augmentation, binary classification, and real-time prediction</li>
+              </ul>
+            </div>
+            <button class="project-link" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Spoken Digit Classification -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #f12711, #f5af19);">
+            <div class="project-overlay">
+              <span class="tech-tag">Librosa</span>
+              <span class="tech-tag">MFCC</span>
+              <span class="tech-tag">SVM</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Spoken Digit Classification</h3>
+            <p>Machine learning pipeline to classify spoken digits using MFCC features and SVM.</p>
+            <div class="project-details" style="display: none;">
+              <h4>Project Details:</h4>
+              <ul>
+                <li>Implemented a machine learning pipeline to classify spoken digits (04–09) using the AudioMNIST dataset</li>
+                <li>Extracted MFCC features from audio files using Librosa to represent time-series speech data effectively</li>
+                <li>Applied Label Encoding and StandardScaler for preprocessing and normalization</li>
+                <li>Trained a Support Vector Machine (SVM) with a linear kernel for digit classification</li>
+                <li>Evaluated model performance using accuracy score and classification report from scikit-learn</li>
+              </ul>
+            </div>
+            <button class="project-link" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Car Price Prediction -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #654ea3, #eaafc8);">
+            <div class="project-overlay">
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">LightGBM</span>
+              <span class="tech-tag">Feature Engineering</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Car Price Prediction</h3>
+            <p>Supervised regression model to predict car prices using various boosting algorithms.</p>
+            <div class="project-details" style="display: none;">
+              <h4>Project Details:</h4>
+              <ul>
+                <li>Developed a supervised regression model to predict car prices using a dataset with various car features</li>
+                <li>Performed data preprocessing, including handling missing values, feature scaling, and encoding categorical variables</li>
+                <li>Explored feature importance using correlation heatmaps and feature selection techniques</li>
+                <li>Built and evaluated multiple regression models: Linear Regression, Decision Tree, Random Forest, XGBoost, LightGBM, CatBoost, SVR</li>
+                <li>Tuned hyperparameters using GridSearchCV and RandomizedSearchCV to optimize model performance</li>
+              </ul>
+            </div>
+            <button class="project-link" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <%- include('partials/footer'); %>
+  
+  <script src="/js/stars.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    function toggleDetails(button) {
+      const details = button.previousElementSibling;
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+        button.textContent = 'Hide Details';
+      } else {
+        details.style.display = 'none';
+        button.textContent = 'View Details';
+      }
+    }
+  </script>
+</body>
+</html>

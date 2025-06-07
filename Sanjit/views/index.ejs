@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjit Davuluri - Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    
+    <div id="stars-container"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="/images/sanjit.jpg" alt="Sanjit Davuluri">
+                </div>
+                <h1>Sanjit Davuluri</h1>
+                <p class="subtitle">Python Developer & AI Enthusiast</p>
+                <div class="hero-links">
+                    <a href="/projects" class="cta-button">
+                        <span>View Projects</span>
+                    </a>
+                    <a href="/experience" class="cta-button secondary">
+                        <span>My Experience</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
+                        <li>Machine Learning</li>
+                        <li>Gen AI</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <ul>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-learn</li>
+                        <li>Pandas</li>
+                        <li>Flask</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        // Create animated background
+        const starsContainer = document.getElementById('stars-container');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.style.position = 'absolute';
+            star.style.width = '2px';
+            star.style.height = '2px';
+            star.style.background = 'white';
+            star.style.borderRadius = '50%';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random();
+            star.style.animation = `twinkle ${Math.random() * 3 + 2}s infinite`;
+            starsContainer.appendChild(star);
+        }
+
+        // Add twinkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes twinkle {
+                0%, 100% { opacity: 0.2; }
+                50% { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
